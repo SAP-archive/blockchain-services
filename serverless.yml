@@ -1,0 +1,45 @@
+service: cla-assitant-dapp
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: eu-central-1
+  timeout: 30 # set default timeout to same timeout as api gateway
+  iamRoleStatements: # allow access to sqs queue
+    - Effect: "Allow"
+      Action:
+        - "sqs:SendMessage"
+        - "sqs:GetQueueUrl"
+        - "sqs:ListQueues"
+      Resource: # dynamic loading of sqs queue arn
+        Fn::GetAtt: [SQSQueue, Arn]
+
+functions:
+  app:
+    handler: ./src/lambda.handler
+    events:
+      - http: ANY /
+      - http: "ANY {proxy+}"
+  postEndpoint:
+    handler: ./src/lambda.handler
+    events:
+      - http:
+          path: /webhook
+          method: post
+  queueWorker:
+    handler: ./src/sqsWorker.handler
+    timeout: 300 # set higher timeout for transaction
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt: [SQSQueue, Arn]
+          batchSize: 1
+
+# define the AWS resources here
+resources:
+  Resources:
+    SQSQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "CLA-DAPP-DEV"
+        VisibilityTimeout: 600
