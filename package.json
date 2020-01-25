@@ -1,7 +1,7 @@
 {
   "name": "cla-assistant-signature-storage",
   "version": "0.0.1",
-  "description": "A distributed storage for digital signatures on the Ethereum-Blockchain",
+  "description": "A distributed storage system to store for digital signatures on the ethereum blockchain",
   "scripts": {
     "build": "truffle compile",
     "serve:ropsten": "truffle exec server.js --network ropsten",
