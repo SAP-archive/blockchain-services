@@ -1,17 +1,6 @@
 # !EXPERIMENTAL!
 Note: This project is in experimental state. Do not use for production use!
 
-# CLA Blockchain Services
-This repository simplifies the storage of CLA Signatures on the Ethereum Blockchain.
-
-## Motivation
-To optimize data security the [GitHub Actions based CLA Handling](https://github.com/cla-assistant/github-action/blob/master/README.md) leverages Smart Contracts on the Ethereum Blockchain by storing CLA Signatures in the corresponding Distributed Ledger. 
-
-## Status 
-Tested successfully on the Ropsten Test Network using https://github.com/fabianriewe/cla-assistant-signature-storage & https://github.com/fabianriewe/cla-assistant-signature-finder.  
-
-The basic migration to this org + consolidation shall be completed until January 20th.
-
 # CLA-Assistant: Signature Storage
 
 ## Overview
@@ -24,6 +13,12 @@ By using the Ethereum network, data is stored world-wide, distributed and perman
 It is possible to connect the application to any other network. The API is written in node.js with express. 
 We used the serverless framework (AWS) for cost optimization. 
 There is also the option to run the application inside a Dockerfile. We highly recommend to use it as a serverless application.
+
+## Motivation
+To optimize data security the [GitHub Actions based CLA Handling](https://github.com/cla-assistant/github-action/blob/master/README.md) leverages Smart Contracts on the Ethereum Blockchain by storing CLA Signatures in the corresponding Distributed Ledger. 
+
+## Status 
+Tested successfully on the Ropsten Test Network using https://github.com/fabianriewe/cla-assistant-signature-storage & https://github.com/fabianriewe/cla-assistant-signature-finder.  
 
 ## Prerequisites
 
