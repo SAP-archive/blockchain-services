@@ -1,0 +1,29 @@
+{
+  "name": "cla-assistant-signature-storage",
+  "version": "0.0.1",
+  "description": "A distributed storage for digital signatures on the Ethereum-Blockchain",
+  "scripts": {
+    "build": "truffle compile",
+    "serve:ropsten": "truffle exec server.js --network ropsten",
+    "serve:live": "truffle exec server.js --network live",
+    "serve:chain": "truffle develop",
+    "serve": "nodemon src/app.local.js",
+    "solidity-docgen": "solidity-docgen"
+  },
+  "author": "Fabian Riewe",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@truffle/contract": "^4.1.1",
+    "@truffle/hdwallet-provider": "^1.0.26",
+    "aws-sdk": "^2.587.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1",
+    "serverless-http": "^2.3.0",
+    "web3": "^1.2.4"
+  },
+  "devDependencies": {
+    "solidity-docgen": "^0.3.13"
+  }
+}
