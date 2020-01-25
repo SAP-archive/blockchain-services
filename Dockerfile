@@ -6,4 +6,4 @@ RUN npm install -g truffle
 COPY . .
 RUN npm run build
 EXPOSE 3000
-CMD ["npm", "run", "serve:docker"]
+CMD ["npm", "run", "serve"]
