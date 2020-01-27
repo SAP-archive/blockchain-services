@@ -1,30 +1,25 @@
-# !EXPERIMENTAL!
-Note: This project is in experimental state. Do not use for production use!
-
-# CLA-Assistant: Signature Storage
-
-## Overview
-
-This project was created during the SAP Tools Hackathon 2019. By exploring the blockchain technology we were able to
-create a permanent and distributed storage solution for digital signatures. The idea behind this, was to find a solution
-which would provide a cheap and non reversible storage for a signature. Whenever a user signs a CLA in the repository, 
-an automated process (e.g Github Action) will send the data to an endpoint, which inserts the data into a blockchain. 
-By using the Ethereum network, data is stored world-wide, distributed and permanently. 
-It is possible to connect the application to any other network. The API is written in node.js with express. 
-We used the serverless framework (AWS) for cost optimization. 
-There is also the option to run the application inside a Dockerfile. We highly recommend to use it as a serverless application.
+# CLA-Assistant: Decentralized Signature Storage
+These Blockchain Services provide the option to store CLA Signatures on the [Ethereum Blockchain](https://de.wikipedia.org/wiki/Ethereum).  
 
 ## Motivation
 To optimize data security the [GitHub Actions based CLA Handling](https://github.com/cla-assistant/github-action/blob/master/README.md) leverages Smart Contracts on the Ethereum Blockchain by storing CLA Signatures in the corresponding Distributed Ledger. 
 
-## Status 
-Tested successfully on the Ropsten Test Network using https://github.com/fabianriewe/cla-assistant-signature-storage & https://github.com/fabianriewe/cla-assistant-signature-finder.  
-
+# Usage
 ## Prerequisites
 
 - AWS Account (when run in serverless mode)
-- Ethereum Wallet (when deployed on ethereum-blockchain)
+- Ethereum Wallet (when deployed on ethereum-blockchain) with some Ether for the [gas fee / transaction fee](https://ethereum.stackexchange.com/questions/3/what-is-meant-by-the-term-gas)
 - Blockchain Access (ganache, infura, truffle develop, etc.)
+
+
+## How it works
+
+Whenever a user signs a CLA in the repository, 
+an automated process (e.g Github Action) will send the data to an endpoint, which inserts the data into a blockchain. 
+The API is written in node.js with express. 
+We used the serverless framework (AWS) for cost optimization. 
+There is also the option to run the application in a [Docker Container](https://github.com/cla-assistant/blockchain-services/blob/master/Dockerfile). We highly recommend to use it as a serverless application.
+
 
 ## Smart Contract
 
