@@ -16,8 +16,8 @@ There is also the option to run the application in a [Docker Container](https://
 
 ## Client
 
-A detailed documentation about the Signature Viewer can be found here.
+A detailed documentation about the Signature Viewer can be found [here](https://github.com/cla-assistant/blockchain-services/blob/master/client/README.md).
 
 ## Server
 
-A detailed documentation about the Blockchain Services itself (backend) can be found here.
+A detailed documentation about the Blockchain Services itself (backend) can be found [here](https://github.com/cla-assistant/blockchain-services/blob/master/server/README.md).
