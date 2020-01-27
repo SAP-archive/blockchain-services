@@ -4,7 +4,7 @@ These Blockchain Services provide the option to store and explore CLA Signatures
 
 ## Motivation
 
-To optimize data security the [GitHub Actions based CLA Handling](https://github.com/cla-assistant/github-action/blob/master/README.md) leverages Smart Contracts on the Ethereum Blockchain by storing CLA Signatures in the corresponding Distributed Ledger.
+To optimize data security the [GitHub Actions based CLA Handling](https://github.com/cla-assistant/github-action/blob/master/README.md) provides the option to leverage Smart Contracts on the Ethereum Blockchain by storing CLA Signatures in the corresponding Distributed Ledger.
 
 ## How it works
 
