@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is written in Vue.js and used as a very simple UI for the CLA-Assistant Signature Storage. It connects to the hosted decentralized application and uses REST communication.
+This project is written in Vue.js and used as a very simple UI for the CLA-Assistant Signature Storage. It connects to the hosted application and uses REST communication.
 
 ### Project setup
 
